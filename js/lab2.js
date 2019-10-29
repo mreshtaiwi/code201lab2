@@ -6,7 +6,7 @@ alert('please answer the 5 questions yes or no - you can use ( y , n) as answer 
 
 var q1 = prompt("my name is sohaib?").toLowerCase();
 while(q1 != 'y' && q1 != 'yes' && q1 != 'n' && q1 != 'no'){
-    q1 = prompt("my name is sohaib?").toLowerCase();
+    q1 = prompt("my name is sohaib? you can use these options 'yes no y n' only").toLowerCase();
 }
 if(q1 === 'n' || q1 === 'no'){
     //console.log('corrct');
@@ -25,7 +25,7 @@ else{
 
 var q2 = prompt("my favourite color is blue?").toLowerCase();
 while(q2 != 'y' && q2 != 'yes' && q2 != 'n' && q2 != 'no'){
-    q2 = prompt("my favourite color is blue?").toLowerCase();
+    q2 = prompt("my favourite color is blue? you can use these options 'yes no y n' only").toLowerCase();
 }
 if(q2 === 'y' || q2 === 'yes'){
     console.log('corrct');
@@ -44,7 +44,7 @@ else{
 
 var q3 = prompt("my favourite food is Maqlobeh?").toLowerCase();
 while(q3 != 'y' && q3 != 'yes' && q3 != 'n' && q3 != 'no'){
-    q3 = prompt("my favourite food is Maqlobeh?").toLowerCase();
+    q3 = prompt("my favourite food is Maqlobeh? you can use these options 'yes no y n' only").toLowerCase();
 }
 if(q3 === 'y' || q3 === 'yes'){
     console.log('corrct');
@@ -63,7 +63,7 @@ else{
 
 var q4 = prompt("Do i love Cats?").toLowerCase();
 while(q4 != 'y' && q4 != 'yes' && q4 != 'n' && q4 != 'no'){
-    q4 = prompt("Do i love Cats?").toLowerCase();
+    q4 = prompt("Do i love Cats? you can use these options 'yes no y n' only").toLowerCase();
 }
 if(q4 === 'y' || q4 === 'yes'){
     console.log('corrct');
@@ -82,7 +82,7 @@ else{
 
 var q5 = prompt("Do i live in Amman?").toLowerCase();
 while(q5 != 'y' && q5 != 'yes' && q5 != 'n' && q5 != 'no'){
-    q5 = prompt("Do i live in Amman?").toLowerCase();
+    q5 = prompt("Do i live in Amman? you can use these options 'yes no y n' only").toLowerCase();
 }
 if(q5 === 'y' || q5 === 'yes'){
     console.log('corrct');
