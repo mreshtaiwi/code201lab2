@@ -1,3 +1,6 @@
+'use strict'
+var name = prompt("Could you tell us what's your name please");
+document.getElementById("welcome").innerHTML = "Welcome " + name;
 
 alert('please answer the 5 questions yes or no - you can use ( y , n) as answer Only');
 
@@ -6,12 +9,18 @@ while(q1 != 'y' && q1 != 'yes' && q1 != 'n' && q1 != 'no'){
     q1 = prompt("my name is sohaib?").toLowerCase();
 }
 if(q1 === 'n' || q1 === 'no'){
-    console.log('corrct');
+    //console.log('corrct');
     //alert('corrct');
+    document.getElementById("q1").innerHTML = "Your answer for Q1 is corrct";
+    var element = document.getElementById("q1");
+    element.classList.add("correct");
 }
 else{
     console.log('wrong');
     //alert('wrong');
+    document.getElementById("q1").innerHTML = "Your answer for Q1 is wrong";
+    var element = document.getElementById("q1");
+    element.classList.add("wrong");
 }
 
 var q2 = prompt("my favourite color is blue?").toLowerCase();
@@ -21,10 +30,16 @@ while(q2 != 'y' && q2 != 'yes' && q2 != 'n' && q2 != 'no'){
 if(q2 === 'y' || q2 === 'yes'){
     console.log('corrct');
     //alert('corrct');
+    document.getElementById("q2").innerHTML = "Your answer for Q2 is corrct";
+    var element = document.getElementById("q2");
+    element.classList.add("correct");
 }
 else{
     console.log('wrong');
     //alert('wrong');
+    document.getElementById("q2").innerHTML = "Your answer for Q2 is wrong";
+    var element = document.getElementById("q2");
+    element.classList.add("wrong");
 }
 
 var q3 = prompt("my favourite food is Maqlobeh?").toLowerCase();
@@ -34,10 +49,16 @@ while(q3 != 'y' && q3 != 'yes' && q3 != 'n' && q3 != 'no'){
 if(q3 === 'y' || q3 === 'yes'){
     console.log('corrct');
     //alert('corrct');
+    document.getElementById("q3").innerHTML = "Your answer for Q3 is corrct";
+    var element = document.getElementById("q3");
+    element.classList.add("correct");
 }
 else{
     console.log('wrong');
     //alert('wrong');
+    document.getElementById("q3").innerHTML = "Your answer for Q3 is wrong";
+    var element = document.getElementById("q3");
+    element.classList.add("wrong");
 }
 
 var q4 = prompt("Do i love Cats?").toLowerCase();
@@ -47,23 +68,35 @@ while(q4 != 'y' && q4 != 'yes' && q4 != 'n' && q4 != 'no'){
 if(q4 === 'y' || q4 === 'yes'){
     console.log('corrct');
     //alert('corrct');
+    document.getElementById("q4").innerHTML = "Your answer for Q4 is corrct";
+    var element = document.getElementById("q4");
+    element.classList.add("correct");
 }
 else{
     console.log('wrong');
     //alert('wrong');
+    document.getElementById("q4").innerHTML = "Your answer for Q4 is wrong";
+    var element = document.getElementById("q4");
+    element.classList.add("wrong");
 }
 
-var q4 = prompt("Do i live in Amman?").toLowerCase();
-while(q4 != 'y' && q4 != 'yes' && q4 != 'n' && q4 != 'no'){
-    q4 = prompt("Do i live in Amman?").toLowerCase();
+var q5 = prompt("Do i live in Amman?").toLowerCase();
+while(q5 != 'y' && q5 != 'yes' && q5 != 'n' && q5 != 'no'){
+    q5 = prompt("Do i live in Amman?").toLowerCase();
 }
-if(q4 === 'y' || q4 === 'yes'){
+if(q5 === 'y' || q5 === 'yes'){
     console.log('corrct');
     //alert('corrct');
+    document.getElementById("q5").innerHTML = "Your answer for Q5 is corrct";
+    var element = document.getElementById("q5");
+    element.classList.add("correct");
 }
 else{
     console.log('wrong');
     //alert('wrong');
+    document.getElementById("q5").innerHTML = "Your answer for Q5 is wrong";
+    var element = document.getElementById("q5");
+    element.classList.add("wrong");
 }
 
 

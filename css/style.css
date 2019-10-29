@@ -26,3 +26,17 @@ body{
 .cleardiv{
     clear: both;
 }
+.q1{
+    font-size: 20px;
+    display: block;
+    padding: 5px;
+    float: left;
+    margin:15px;
+    width: 100px;
+}
+.correct{
+    background-color: lightgreen;
+}
+.wrong{
+    background-color: red;
+}
