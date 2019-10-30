@@ -101,8 +101,42 @@ else{
     var element = document.getElementById("q5");
     element.classList.add("wrong");
 }
+var randnum = Math.floor((Math.random() * 10) + 1);
+console.log(randnum);
+var q6 = [];
+for (var i = 0; i < 4; i++) {
+    q6[i] = prompt("pick a number from 1-10 please? you have " + (4 - i) +" chances");
+    if (q6[i] < randnum) {
+        alert('it is too low');
+    }else if(q6[i] > randnum){
+        alert('it is too high');
+    }else if(q6[i] == randnum){
+        alert('super you are correct');
+    }
+}
+var element = document.getElementById("q6");
+element.innerHTML = "The correct answer is " +randnum;
+element.classList.add("correct");
 
-
+/* read it later
+while(q5 != 'y' && q5 != 'yes' && q5 != 'n' && q5 != 'no'){
+    q5 = prompt("Do i live in Amman? you can use these options 'yes no y n' only").toLowerCase();
+}
+if(q5 === 'y' || q5 === 'yes'){
+    console.log('corrct');
+    //alert('corrct');
+    document.getElementById("q5").innerHTML = "Your answer for Q5 is corrct";
+    var element = document.getElementById("q5");
+    element.classList.add("correct");
+}
+else{
+    console.log('wrong');
+    //alert('wrong');
+    document.getElementById("q5").innerHTML = "Your answer for Q5 is wrong";
+    var element = document.getElementById("q5");
+    element.classList.add("wrong");
+}
+*/
 // var questions = ["my name is sohaib?","my favourite color is blue?","my favourite food is Maqlobeh?","Do i love Cats?","Do i live in Amman?"];
 // var answers = [];
 // var correct = ['n','y','y','y'];
