@@ -1,5 +1,8 @@
-'use strict'
+'use strict';
 var name = prompt("Could you tell us what's your name please");
+while(name === "null"){
+    name = prompt("Could you tell us what's your name please");
+}
 document.getElementById("welcome").innerHTML = "Welcome " + name;
 
 alert('please answer the 5 questions yes or no - you can use ( y , n) as answer Only');
@@ -98,10 +101,6 @@ else{
     var element = document.getElementById("q5");
     element.classList.add("wrong");
 }
-
-
-
-
 
 
 // var questions = ["my name is sohaib?","my favourite color is blue?","my favourite food is Maqlobeh?","Do i love Cats?","Do i live in Amman?"];
