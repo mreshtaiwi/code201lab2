@@ -32,11 +32,22 @@ body{
     padding: 5px;
     float: left;
     margin:15px;
-    width: 100px;
+    /* width: 100px; */
 }
 .correct{
     background-color: lightgreen;
 }
 .wrong{
     background-color: red;
+}
+
+.scores{
+    margin:15px;
+    font-size: 20px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    background-color: lightblue;
+    text-align: center;
 }

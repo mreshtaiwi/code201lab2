@@ -1,4 +1,5 @@
 'use strict';
+var counter = 0;
 var name = prompt("Could you tell us what's your name please");
 while(name === "null"){
     name = prompt("Could you tell us what's your name please");
@@ -17,6 +18,7 @@ if(q1 === 'n' || q1 === 'no'){
     document.getElementById("q1").innerHTML = "Your answer for Q1 is corrct";
     var element = document.getElementById("q1");
     element.classList.add("correct");
+    counter++;
 }
 else{
     console.log('wrong');
@@ -36,6 +38,7 @@ if(q2 === 'y' || q2 === 'yes'){
     document.getElementById("q2").innerHTML = "Your answer for Q2 is corrct";
     var element = document.getElementById("q2");
     element.classList.add("correct");
+    counter++;
 }
 else{
     console.log('wrong');
@@ -55,6 +58,7 @@ if(q3 === 'y' || q3 === 'yes'){
     document.getElementById("q3").innerHTML = "Your answer for Q3 is corrct";
     var element = document.getElementById("q3");
     element.classList.add("correct");
+    counter++;
 }
 else{
     console.log('wrong');
@@ -74,6 +78,7 @@ if(q4 === 'y' || q4 === 'yes'){
     document.getElementById("q4").innerHTML = "Your answer for Q4 is corrct";
     var element = document.getElementById("q4");
     element.classList.add("correct");
+    counter++;
 }
 else{
     console.log('wrong');
@@ -93,6 +98,7 @@ if(q5 === 'y' || q5 === 'yes'){
     document.getElementById("q5").innerHTML = "Your answer for Q5 is corrct";
     var element = document.getElementById("q5");
     element.classList.add("correct");
+    counter++;
 }
 else{
     console.log('wrong');
@@ -101,6 +107,7 @@ else{
     var element = document.getElementById("q5");
     element.classList.add("wrong");
 }
+
 var randnum = Math.floor((Math.random() * 10) + 1);
 console.log(randnum);
 var q6 = [];
@@ -112,11 +119,71 @@ for (var i = 0; i < 4; i++) {
         alert('it is too high');
     }else if(q6[i] == randnum){
         alert('super you are correct');
+        counter++;
     }
 }
 var element = document.getElementById("q6");
 element.innerHTML = "The correct answer is " +randnum;
 element.classList.add("correct");
+
+
+var q7 = [5,8,86,55,9,7];
+var ans = [];
+var theanswer;
+for (var i = 0; i <= 5; i++) {
+    ans[i] = Number(prompt("pick a number from 1-100 please? you have " + (6 - i) +" chances"));
+    switch (ans[i]) {
+        case 5:
+            alert('congratulations');
+            counter++;
+            i=6;
+            theanswer = 5;
+            break;
+        case 8: 
+            alert('congratulations');
+            counter++;
+            i=6;
+            theanswer = 8;
+            break;
+        case 86:
+            alert('congratulations');
+            counter++;
+            i=6;
+            theanswer = 86;
+            break;
+        case 55:
+            alert('congratulations');
+            counter++;
+            i=6;
+            theanswer = 55;
+            break;
+        case 9:
+            alert('congratulations');
+            counter++;
+            i=6;
+            theanswer = 9;
+            break;
+        case 7:
+            alert('congratulations');
+            counter++;
+            i=6;
+            theanswer = 7;
+            break;   
+        default:
+            break;
+    }
+}
+var element = document.getElementById("q7");
+var answers ='';
+for (var  x = 0; x < q7.length; x++) {
+   answers += q7[x] +" ";
+}
+element.innerHTML += "The correct answers are " + answers +"and your answer was " + theanswer;
+element.classList.add("correct");
+
+var el= document.getElementById('score');
+el.innerHTML = "your final score is " + counter + " out of 7";
+
 
 /* read it later
 while(q5 != 'y' && q5 != 'yes' && q5 != 'n' && q5 != 'no'){
