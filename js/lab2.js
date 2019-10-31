@@ -122,6 +122,7 @@ for (var i = 0; i < 4; i++) {
     }else if(q6[i] == randnum){
         alert('super you are correct');
         counter++;
+        i=5;
     }
 }
 var element = document.getElementById("q6");
