@@ -1,19 +1,20 @@
 'use strict';
-var counter = 0;
+var counter = 0;//this variable will count the marks for the answers.
+
 var name = prompt("Could you tell us what's your name please");
 while(name === "null"){
     name = prompt("Could you tell us what's your name please");
 }
 document.getElementById("welcome").innerHTML = "Welcome " + name;
 
-alert('please answer the 5 questions yes or no - you can use ( y , n) as answer Only');
+alert('please answer the 5 questions yes or no - you can use ( y , n) or (yes,no) as answer Only');
 
 var q1 = prompt("my name is sohaib?").toLowerCase();
 while(q1 != 'y' && q1 != 'yes' && q1 != 'n' && q1 != 'no'){
     q1 = prompt("my name is sohaib? you can use these options 'yes no y n' only").toLowerCase();
 }
 if(q1 === 'n' || q1 === 'no'){
-    //console.log('corrct');
+    console.log('corrct');
     //alert('corrct');
     document.getElementById("q1").innerHTML = "Your answer for Q1 is corrct";
     var element = document.getElementById("q1");
@@ -108,6 +109,7 @@ else{
     element.classList.add("wrong");
 }
 
+//q6 is to create a random number and the user guesses it and he/she has only 4 attempts.
 var randnum = Math.floor((Math.random() * 10) + 1);
 console.log(randnum);
 var q6 = [];
@@ -127,6 +129,7 @@ element.innerHTML = "The correct answer is " +randnum;
 element.classList.add("correct");
 
 
+//q7 is to ask the user to guess a number from 5 choices and he/she has only 6 attempts.
 var q7 = [5,8,86,55,9,7];
 var ans = [];
 var theanswer;
@@ -181,6 +184,9 @@ for (var  x = 0; x < q7.length; x++) {
 element.innerHTML += "The correct answers are " + answers +"and your answer was " + theanswer;
 element.classList.add("correct");
 
+
+
+//this will give the user the total score.
 var el= document.getElementById('score');
 el.innerHTML = "your final score is " + counter + " out of 7";
 
