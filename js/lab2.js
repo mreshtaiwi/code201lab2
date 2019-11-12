@@ -118,15 +118,15 @@ for (var i = 0; i < 4; i++) {
     if (q6[i] < randnum) {
         alert('it is too low');
     } else if (q6[i] > randnum) {
-        alert('it is too high');
-    } else if (q6[i] === randnum) {
+        alert('it is too high'); 
+    // eslint-disable-next-line eqeqeq
+    } else if (q6[i] == randnum) {//don't change it to ===
         alert('super you are correct');
         counter++;
         i = 5;
     }
 }
-
-element6.innerHTML = 'The correct answer is ' + randnum;
+element6.innerHTML = 'Your answer for Q6 is corrct and it was ' + randnum;
 element6.classList.add('correct');
 
 
@@ -134,6 +134,8 @@ element6.classList.add('correct');
 var q7 = [5, 8, 86, 55, 9, 7];
 var ans = [];
 var theanswer;
+var element7 = document.getElementById('q7');
+var answers = '';
 for (var j = 0; j <= 5; j++) {
     ans[j] = Number(prompt('pick a number from 1-100 please? you have ' + (6 - j) + ' chances'));
     switch (ans[j]) {
@@ -174,11 +176,13 @@ for (var j = 0; j <= 5; j++) {
             theanswer = 7;
             break;
         default:
+            theanswer = ans[j];
+            element7.classList.add('wrong');
             break;
     }
 }
-var element7 = document.getElementById('q7');
-var answers = '';
+
+
 for (var x = 0; x < q7.length; x++) {
     answers += q7[x] + ' ';
 }
